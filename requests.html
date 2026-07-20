@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRS — Requests</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
@@ -12,7 +15,7 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-          <div
+        <div
           class="d-flex justify-content-between pb-4 mb-4 brequest-bottom brequest-2"
         >
           <h2>Requests</h2>
@@ -36,7 +39,7 @@
         <section
           class="list d-flex flex-row flex-wrap bg-body-tertiary gap-5 p-4 rounded-4"
         >
-          <table class="table table-hover w-100 rounded-4">
+          <table class="table table-hover w-75 rounded-4">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -46,16 +49,204 @@
                 <th scope="col">Requested By</th>
                 <th></th>
               </tr>
-
             </thead>
-            <!-- this is where the table starts -->
+
             <tbody>
+              <!-- this is where the table starts -->
               <tr>
                 <th scope="row">1</th>
-                <td><div>Office Supplies </div> <div class="fs-6 fw-light">Need to reup</div> </td>
+                <td>
+                  <div>Office Supplies</div>
+                  <div class="fs-6 fw-light text-secondary">Need to reup</div>
+                </td>
                 <td><span class="badge text-bg-success">Approved</span></td>
                 <td>$290.19</td>
-                <td><div>Russel Kassulke</div><div class="fs-6 fw-light">Pickup</div></td>
+                <td>
+                  <div>Russel Kassulke</div>
+                  <div class="fs-6 fw-light text-secondary">Pickup</div>
+                </td>
+                <td>
+                  <div class="dropdown d-inline">
+                    <button
+                      class="btn btn-light"
+                      style="background: none"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="bi pe-none me-2"
+                        width="20"
+                        height="20"
+                        fill="#007AFF"
+                      >
+                        <use
+                          href="/assets/bootstrap-icons.svg#three-dots-vertical"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/request-detail.html"
+                          >View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/request-edit.html"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleterequestModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <!-- more <tr> rows, one per request -->
+              <!-- this is where the table starts -->
+              <tr>
+                <th scope="row">2</th>
+                <td>
+                  <div>Laptop Stand</div>
+                  <div class="fs-6 fw-light text-secondary">
+                    Ergonomic improvement for remote work
+                  </div>
+                </td>
+                <td><span class="badge text-bg-primary">New</span></td>
+                <td>$0</td>
+                <td>
+                  <div>Elinore Steubet</div>
+                  <div class="fs-6 fw-light text-secondary">Delivery</div>
+                </td>
+                <td>
+                  <div class="dropdown d-inline">
+                    <button
+                      class="btn btn-light"
+                      style="background: none"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="bi pe-none me-2"
+                        width="20"
+                        height="20"
+                        fill="#007AFF"
+                      >
+                        <use
+                          href="/assets/bootstrap-icons.svg#three-dots-vertical"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/request-detail.html"
+                          >View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/request-edit.html"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleterequestModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <!-- more <tr> rows, one per request -->
+              <!-- this is where the table starts -->
+              <tr>
+                <th scope="row">3</th>
+                <td>
+                  <div>Monitor Arms</div>
+                  <div class="fs-6 fw-light text-secondary">
+                    Dual monitor setup for deisgn team
+                  </div>
+                </td>
+                <td><span class="badge text-bg-warning">Review</span></td>
+                <td>$0</td>
+                <td>
+                  <div>Elinore Steubet</div>
+                  <div class="fs-6 fw-light text-secondary">
+                    Signature Delivery
+                  </div>
+                </td>
+                <td>
+                  <div class="dropdown d-inline">
+                    <button
+                      class="btn btn-light"
+                      style="background: none"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="bi pe-none me-2"
+                        width="20"
+                        height="20"
+                        fill="#007AFF"
+                      >
+                        <use
+                          href="/assets/bootstrap-icons.svg#three-dots-vertical"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/request-detail.html"
+                          >View</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/request-edit.html"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#deleterequestModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <!-- more <tr> rows, one per request -->
+              <!-- this is where the table starts -->
+              <tr>
+                <th scope="row">4</th>
+                <td>
+                  <div>Whiteboard Markers</div>
+                  <div class="fs-6 fw-light text-secondary">
+                    Restocking conference room supplies
+                  </div>
+                </td>
+                <td><span class="badge text-bg-danger">Rejected</span></td>
+                <td>$0</td>
+                <td>
+                  <div>Elinore Steubet</div>
+                  <div class="fs-6 fw-light text-secondary">Pickup</div>
+                </td>
                 <td>
                   <div class="dropdown d-inline">
                     <button
