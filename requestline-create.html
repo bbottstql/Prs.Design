@@ -20,18 +20,24 @@
         >
           <h2>New Request Line</h2>
         </div>
-        <form class="form w-50">
+        <form
+          class="form w-50"
+          novalidate
+          data-success="/Requests.html"
+        >
           <div class="card p-4">
             <h5 class="card-title"><strong>Item</strong></h5>
 
             <div class="mb-3">
               <label for="productItemId" class="form-label">Product</label>
-              <select id="productItemId" class="form-select">
-                <option value="0" selected>Select...</option>
+              <select id="productItemId" class="form-select" required>
+                <option value="">Select...</option>
+                <option value="0">Refined Ceramic Towels</option>
                 <option value="1">Chair</option>
                 <option value="2">Mozzarella Sticks</option>
                 <!-- ...all items -->
               </select>
+              <div class="invalid-feedback">Product is required</div>
             </div>
 
             <div class="mb-3">
@@ -45,8 +51,10 @@
                 id="quantity"
                 type="number"
                 class="form-control"
-                value="0"
+                value="1"
+                min="1"
               />
+              <div class="invalid-feedback">Quantity cannot be zero</div>
             </div>
 
             <div class="mb-3">
@@ -77,5 +85,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validation.js"></script>
   </body>
 </html>

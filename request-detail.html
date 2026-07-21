@@ -20,6 +20,33 @@
         >
           <h2>Request</h2>
           <div class="d-flex justify-content-end gap-2">
+            <button type="button" class="btn btn-success">
+              <svg
+                class="bi pe-none me-2"
+                width="16"
+                height="16"
+                fill="#FFFFFF"
+              >
+                <use href="/assets/bootstrap-icons.svg#hand-thumbs-up" />
+              </svg>
+              Approve
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#cancelModal"
+            >
+              <svg
+                class="bi pe-none me-2"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <use href="/assets/bootstrap-icons.svg#hand-thumbs-down" />
+              </svg>
+              Reject
+            </button>
             <a href="/Request-edit.html" class="btn btn-outline">
               <svg
                 class="bi pe-none me-2"
@@ -206,7 +233,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">Cancel Request</h5>
+                <h5 class="modal-title">Reject Request</h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -215,10 +242,11 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form novalidate
+          data-success="/request-detail.html">
                   <div class="mb-3">
                     <label class="form-label" for="cancellationReason"
-                      >Cancellation Reason</label
+                      >Rejection Reason</label
                     >
                     <textarea
                       class="form-control"
@@ -227,7 +255,7 @@
                       required
                     ></textarea>
                     <div class="invalid-feedback">
-                      Cancellation reason is required
+                      Rejection reason is required
                     </div>
                   </div>
                   <div class="d-flex justify-content-end gap-2">
@@ -258,5 +286,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validation.js"></script>
   </body>
 </html>
